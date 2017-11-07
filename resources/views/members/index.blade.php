@@ -9,7 +9,7 @@
                         <h3 class="box-title">List of employees</h3>
                     </div>
                     <div class="col-sm-4">
-                        <a class="btn btn-primary" href="{{ route('member.create') }}">Add new employee</a>
+                        <a class="btn btn-primary" href="{{ url('member/create') }}">Add new employee</a>
                     </div>
                 </div>
             </div>
@@ -34,13 +34,13 @@
                                         <td class="sorting_1">{{ $member->fullname }}</td>
                                         <td class="hidden-xs">{{ $member->email }}</td>
                                         <td class="hidden-xs">{{ $member->birthday }}</td>
-                                        <td class="hidden-xs">{{ $member->gender }}</td>
-                                        <td class="hidden-xs">{{ $member->role }}</td>
+                                        <td class="hidden-xs">{{ $member->gender == 0 ? 'Male' : 'Female' }}</td>
+                                        <td class="hidden-xs">{{ $member->role_name }}</td>
                                         <td>
-                                            <form class="row" method="POST" action="{{ route('member.destroy', ['id' => $member->id]) }}" onsubmit = "return confirm('Are you sure?')">
+                                            <form class="row" method="POST" action="{{ url('member/destroy', ['id' => $member->id]) }}" onsubmit = "return confirm('Are you sure?')">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                <a href="{{ route('member.edit', ['id' => $member->id]) }}" class="btn btn-warning col-sm-3 col-xs-5 btn-margin">
+                                                <a href="{{ url('member/edit', ['id' => $member->id]) }}" class="btn btn-warning col-sm-3 col-xs-5 btn-margin">
                                                     Update
                                                 </a>
                                                 <button type="submit" class="btn btn-danger col-sm-3 col-xs-5 btn-margin">

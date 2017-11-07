@@ -20,5 +20,9 @@ Auth::routes();
 Route::get('/dashboard', 'DashboardController@index');
 
 // Member
-Route::resource('member', 'MembersController');
-//Route::get('/member', 'MembersController@index');
+//Route::resource('member', 'MembersController');
+Route::get('/member', 'MembersController@index');
+Route::get('/member/create', 'MembersController@create');
+Route::post('/member/store', 'MembersController@store');
+Route::get('/member/edit/{id}', 'MembersController@edit');
+Route::put('/member/update/{id}', 'MembersController@update');

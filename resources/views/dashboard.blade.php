@@ -68,7 +68,7 @@ desired effect
         <!-- Main content -->
         <section class="content">
             <div class="col-sm-4">
-                <a class="btn btn-primary" href="{{ route('member.index') }}">List member</a>
+                <a class="btn btn-primary" href="{{ url('member') }}">List member</a>
             </div>
             <!-- Your Page Content Here -->
             @yield('content')

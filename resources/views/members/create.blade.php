@@ -6,7 +6,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Add new members</div>
                     <div class="panel-body">
-                        <form class="form-horizontal" role="form" method="POST" action="{{ route('member.store') }}" enctype="multipart/form-data">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('member/store') }}" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="form-group{{ $errors->has('fullname') ? ' has-error' : '' }}">
                                 <label for="fullname" class="col-md-4 control-label">Fullname</label>
