@@ -26,3 +26,10 @@ Route::get('/member/create', 'MembersController@create');
 Route::post('/member/store', 'MembersController@store');
 Route::get('/member/edit/{id}', 'MembersController@edit');
 Route::put('/member/update/{id}', 'MembersController@update');
+
+// Teams
+Route::get('/team', 'TeamsController@index');
+Route::get('/team/create', 'TeamsController@create');
+Route::post('/team/store', 'TeamsController@store');
+Route::get('/team/edit/{id}', 'TeamsController@edit');
+Route::put('/team/update/{id}', 'TeamsController@update');

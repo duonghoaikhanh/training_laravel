@@ -70,6 +70,9 @@ desired effect
             <div class="col-sm-4">
                 <a class="btn btn-primary" href="{{ url('member') }}">List member</a>
             </div>
+            <div class="col-sm-4">
+                <a class="btn btn-primary" href="{{ url('team') }}">List team</a>
+            </div>
             <!-- Your Page Content Here -->
             @yield('content')
 
@@ -90,6 +93,7 @@ desired effect
 
     <!-- Bootstrap 3.3.2 JS -->
     <script src="{{ asset ("/js/bootstrap.min.js") }}" type="text/javascript"></script>
+    <script src="{{ asset ("/js/util.js") }}"></script>
 
     <!-- Optionally, you can add Slimscroll and FastClick plugins.
          Both of these plugins are recommended to enhance the
