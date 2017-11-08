@@ -65,6 +65,9 @@
                                         Create
                                     </button>
                                 </div>
+                                <div class="col-md-6 col-md-offset-4">
+                                    <a class="btn btn-default btn-close" href="{{ url('team') }}">Cancel</a>
+                                </div>
                             </div>
                         </form>
                     </div>
